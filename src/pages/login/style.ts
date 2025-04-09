@@ -5,6 +5,7 @@ export const style = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
+        backgroundColor: '#E6F0FA'
     },
     boxTop:{
         height: Dimensions.get('window').height/3,
@@ -31,7 +32,9 @@ export const style = StyleSheet.create({
     title:{
         fontSize: 20,
         fontWeight: 'bold',
-        paddingTop: 20
+        paddingTop: 20,
+        color: '#4A90E2',
+        marginTop: 20
     },
     titleInput:{
         marginLeft: 5,
@@ -47,39 +50,41 @@ export const style = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         paddingHorizontal: 5,
-        backgroundColor: '#d7d7d7'
+        backgroundColor: '#FFFFFF'
     },
     input: {
         height: '90%',
         width: '90%',
         borderRadius: 15,
         paddingLeft: 5,
-        outlineColor: '#d7d7d7',
-        backgroundColor: '#d7d7d7', 
+        outlineColor: '#FFFFFF',
+        backgroundColor: '#FFFFFF', 
     },
     button:{
-        width: 200,
+        width: '80%',
         height: 50,
-        backgroundColor: 'blue',
+        backgroundColor: '#F6A5C0',
         alignItems: 'center',
         justifyContent: 'center',
-        borderRadius: 40,
+        borderRadius: 20,
         shadowColor: '#000',
         shadowOffset: {
             width: 0,
-            height: 4,
+            height: 2,
         },
-        shadowOpacity: 0.40,
-        shadowRadius: 4.65,
-        elevation: 7
+        shadowOpacity: 0.2,
+        shadowRadius: 4,
+        elevation: 3,
+        paddingVertical: 12
     },
     textButton:{
         fontSize: 20,
         color: 'white',
         fontWeight: 'bold'
     },
-    cliqueAqui:{
+    textClick:{
         marginLeft: 5,
-        color: '#878af6'
+        color: '#878af6',
+        fontSize: 16,
     }
 })

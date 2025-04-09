@@ -1,7 +1,7 @@
 import { Image, Text, TextInput, TouchableOpacity, View } from "react-native"
 import Logo from "../../../assets/images/logo.jpg"
 import { style } from './style'
-import { MaterialIcons} from '@expo/vector-icons'
+import { MaterialIcons } from '@expo/vector-icons'
 import { router } from "expo-router"
 
 
@@ -24,7 +24,7 @@ export const Login = () => {
                     <MaterialIcons 
                         name= 'email'
                         size= {20}
-                        color= 'gray'
+                        color= '#4A90E2'
                     />
                 </View>
                 <Text style={style.titleInput}> SENHA: </Text>
@@ -35,7 +35,7 @@ export const Login = () => {
                     <MaterialIcons 
                         name= 'remove-red-eye'
                         size= {20}
-                        color= 'gray'
+                        color= '#4A90E2'
                     />
                 </View>
             </View>
@@ -49,7 +49,7 @@ export const Login = () => {
             </View>
             <Text style={{color: 'gray', fontSize: 16}}> Não tem conta? 
                 <TouchableOpacity 
-                    style={style.cliqueAqui}
+                    style={style.textClick}
                     onPress={() => router.navigate('/cadastro')}        
                 >
                     Clique Aqui

@@ -39,14 +39,14 @@ export const Cadastro = () => {
                     <Text style={style.textButton}> Cadastrar </Text>
                 </TouchableOpacity>
             </View>
-            <Text style={{color: 'gray', fontSize: 16, paddingBottom: 50}}> Já tem conta? 
-                <TouchableOpacity 
-                    style={style.login}
-                    onPress={() => router.navigate('..')}  
-                >
-                    Login
+            <View style={{ flexDirection: 'row', justifyContent: 'center', paddingBottom: 50 }}>
+                <Text style={{ color: 'gray', fontSize: 16 }}>Ja tem conta? </Text>
+                <TouchableOpacity onPress={() => router.navigate('/')}>
+                    <Text style={style.textClick}>
+                        Login
+                    </Text>
                 </TouchableOpacity>
-            </Text>
+            </View>
         </View>
     )
 }

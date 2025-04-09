@@ -2,53 +2,65 @@ import { StyleSheet } from "react-native";
 
 export const style = StyleSheet.create({
   container: {
-    flex: 1,
-    paddingHorizontal: 20,
+    flexGrow: 1,
     alignItems: "center",
+    paddingVertical: 20,
     backgroundColor: "#EAF2FA",
   },
+
   title: {
     fontSize: 22,
     fontWeight: "700",
     color: "#004AAD",
-    marginTop: 30,
-    marginBottom: 20,
-    textAlign: "center",
-  },
-  text: {
-    fontSize: 16,
-    textAlign: "justify",
-    marginBottom: 30,
-    marginTop: 20
-  },
-  socialContainer: {
-    flexDirection: "row",
-    justifyContent: "space-around",
-    width: "100%",
-    marginTop: 50,
-    marginBottom: 70
-  },
-  socialItem: {
-    alignItems: "center",
-    width: '50%'
-  },
-  socialIcon: {
-    width: 50,
-    height: 50,
-    marginBottom: 5,
-  },
-  socialText: {
-    fontSize: 14,
-  },
-  address: {
-    textAlign: "center",
-    fontSize: 14,
+    marginTop: 20,
     marginBottom: 50,
   },
+
+  cardContainer: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    justifyContent: "space-evenly",
+    marginTop: 20,
+    gap: 25,
+    paddingHorizontal: 20,
+  },
+
+  card: {
+    width: 150,
+    alignItems: "center",
+    backgroundColor: "#fff",
+    borderRadius: 12,
+    padding: 10,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 3,
+    elevation: 2,
+  },
+
+  cardImage: {
+    width: 100,
+    height: 100,
+    borderRadius: 50,
+    marginBottom: 10,
+  },
+
+  cardName: {
+    fontSize: 16,
+    fontWeight: "600",
+    color: "#333",
+  },
+
+  cardAge: {
+    fontSize: 14,
+    color: "#666",
+  },
+
   button: {
-    width: "80%",
+    width: 115,
     height: 50,
     backgroundColor: '#F6A5C0',
+    marginTop: 50,
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 20,
@@ -63,10 +75,9 @@ export const style = StyleSheet.create({
     paddingVertical: 12
   },
   buttonContainer:{
-    flexDirection: 'row',
     justifyContent: 'center',
-    gap: 20
   },
+
   buttonText: {
     color: "#fff",
     fontSize: 18,

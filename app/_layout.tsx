@@ -33,6 +33,7 @@ export default function RootLayout() {
         <Stack.Screen name="index" options={{ headerShown: false }} />
         <Stack.Screen name="cadastro" options={{ headerShown: false }} />
         <Stack.Screen name="sobre-nos" options={{ headerShown: false }} />
+        <Stack.Screen name="nossos-anjinhos" options={{ headerShown: false }} />
       </Stack>
       <StatusBar style="auto" />
     </ThemeProvider>
