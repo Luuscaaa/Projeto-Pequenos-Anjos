@@ -31,9 +31,10 @@ export default function RootLayout() {
     <ThemeProvider value={DefaultTheme}>
       <Stack>
         <Stack.Screen name="index" options={{ headerShown: false }} />
-        <Stack.Screen name="cadastro" options={{ headerShown: false }} />
-        <Stack.Screen name="sobre-nos" options={{ headerShown: false }} />
-        <Stack.Screen name="nossos-anjinhos" options={{ headerShown: false }} />
+        <Stack.Screen name="(panel)/cadastro" options={{ headerShown: false }} />
+        <Stack.Screen name="(panel)/sobre-nos" options={{ headerShown: false }} />
+        <Stack.Screen name="(panel)/nossos-anjinhos" options={{ headerShown: false }} />
+        <Stack.Screen name="(panel)/home" options={{ headerShown: false }} />
       </Stack>
       <StatusBar style="auto" />
     </ThemeProvider>

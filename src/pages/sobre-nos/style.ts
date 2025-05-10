@@ -1,75 +1,84 @@
 import { StyleSheet } from "react-native";
 
 export const style = StyleSheet.create({
-  container: {
+  container:{
     flex: 1,
+    backgroundColor: '#E6F0FB',
+    paddingHorizontal: 30,
+    alignItems: 'center',
+  },
+  boxBackButton:{
+    marginTop: 40,
+    width: '100%',
+    maxWidth: 700,
+
+  },
+  title:{
+    fontSize: 35,
+    color: '#083072',
+    fontWeight: 'bold',
+  },
+  boxInfos:{
+    borderWidth: 1,
+    width: '100%',
+    maxWidth: 700,
+    height: '60%',
+    marginTop: 60,
+    borderRadius: 8,
+    backgroundColor: 'white',
     paddingHorizontal: 20,
-    alignItems: "center",
-    backgroundColor: "#EAF2FA",
+    paddingVertical: 10,
+    alignItems: 'center'
   },
-  title: {
-    fontSize: 22,
-    fontWeight: "700",
-    color: "#004AAD",
-    marginTop: 30,
-    marginBottom: 20,
-    textAlign: "center",
+  titleInstituto:{
+    fontSize: 25,
+    fontWeight: 'bold',
+    textAlign: 'center',
   },
-  text: {
+  scrollView:{
+    marginTop: 10,
+    borderRadius: 8
+  },
+  text:{
     fontSize: 16,
-    textAlign: "justify",
-    marginBottom: 30,
-    marginTop: 20
+    textAlign: 'justify'
   },
-  socialContainer: {
-    flexDirection: "row",
-    justifyContent: "space-around",
-    width: "100%",
-    marginTop: 50,
-    marginBottom: 70
+  boxButton:{
+    width: '100%',
+    maxWidth: 1000,
+    alignItems: 'center'
   },
-  socialItem: {
-    alignItems: "center",
-    width: '50%'
-  },
-  socialIcon: {
-    width: 50,
+  button:{
+    width: '100%',
     height: 50,
-    marginBottom: 5,
-  },
-  socialText: {
-    fontSize: 14,
-  },
-  address: {
-    textAlign: "center",
-    fontSize: 14,
-    marginBottom: 50,
-  },
-  button: {
-    width: "80%",
-    height: 50,
-    backgroundColor: '#F6A5C0',
+    backgroundColor: '#083072',
     alignItems: 'center',
     justifyContent: 'center',
-    borderRadius: 20,
-    shadowColor: '#000',
-    shadowOffset: {
-        width: 0,
-        height: 2,
-    },
-    shadowOpacity: 0.2,
-    shadowRadius: 4,
-    elevation: 3,
-    paddingVertical: 12
+    borderRadius: 8,
+    marginTop: 40
   },
-  buttonContainer:{
+  textButton:{
+    fontSize: 20,
+    color: 'white',
+    fontWeight: 'bold'
+  },
+  containerTabBar:{
+    width: '100%',
+    height: 80,
+    backgroundColor: '#E6F0FB',
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  tabBar:{
+    width:'100%',
+    maxWidth: 700,
+    height:'100%',
+    borderWidth: 1,
+    borderColor: 'rgba(5, 5, 5, 0.3)',
+    backgroundColor: 'white',
     flexDirection: 'row',
-    justifyContent: 'center',
-    gap: 20
-  },
-  buttonText: {
-    color: "#fff",
-    fontSize: 18,
-    fontWeight: "bold",
-  },
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingHorizontal: 30
+  }
 });

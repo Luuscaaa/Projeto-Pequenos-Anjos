@@ -5,46 +5,41 @@ export const style = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#E6F0FA'
+        backgroundColor: '#E6F0FB',
+        paddingHorizontal: 30
     },
     boxTop:{
-        height: Dimensions.get('window').height/3,
         width: '100%',
         alignItems: 'center',
         justifyContent: 'center',
     },
     boxMid:{
-        height: Dimensions.get('window').height/4,
         width: '100%',
-        paddingHorizontal: 37,
-        marginTop: 10
+        maxWidth: 1000,
+        marginTop: 30,
+        gap: 10
     },
     boxButton:{
-        height: Dimensions.get('window').height/6,
         width: '100%',
+        maxWidth: 1000,
         alignItems: 'center',
-        padding: 30,
     },
     logo:{
-        width: '80%',
-        height: '80%',
+        width: '90%',
+        maxWidth: 300,
+        height: 200,
+        borderRadius: 15
     },
     title:{
-        fontSize: 20,
+        fontSize: 30,
         fontWeight: 'bold',
-        paddingTop: 20,
-        color: '#4A90E2',
-        marginTop: 20
-    },
-    titleInput:{
-        marginLeft: 5,
-        color: 'gray',
-        marginTop: 20
+        color: '#083072',
+        marginTop: 30
     },
     boxInput:{
         width: '100%',
-        height: 40,
-        borderRadius: 15,
+        height: 50,
+        borderRadius: 8,
         borderWidth: 1,
         marginTop: 10, 
         flexDirection: 'row',
@@ -55,27 +50,20 @@ export const style = StyleSheet.create({
     input: {
         height: '90%',
         width: '90%',
-        borderRadius: 15,
+        borderRadius: 8,
         paddingLeft: 5,
         outlineColor: '#FFFFFF',
-        backgroundColor: '#FFFFFF', 
+        backgroundColor: '#FFFFFF',
+        fontSize: 18
     },
     button:{
-        width: '80%',
+        width: '100%',
         height: 50,
-        backgroundColor: '#F6A5C0',
+        backgroundColor: '#083072',
         alignItems: 'center',
         justifyContent: 'center',
-        borderRadius: 20,
-        shadowColor: '#000',
-        shadowOffset: {
-            width: 0,
-            height: 2,
-        },
-        shadowOpacity: 0.2,
-        shadowRadius: 4,
-        elevation: 3,
-        paddingVertical: 12
+        borderRadius: 8,
+        marginTop: 40
     },
     textButton:{
         fontSize: 20,
@@ -83,8 +71,8 @@ export const style = StyleSheet.create({
         fontWeight: 'bold'
     },
     textClick:{
-        marginLeft: 5,
-        color: '#878af6',
+        marginTop: 30,
+        color: '#blue',
         fontSize: 16,
     }
 })

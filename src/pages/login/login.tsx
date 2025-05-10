@@ -13,28 +13,29 @@ export const Login = () => {
                     source={Logo} 
                     style={style.logo} 
                 />
-                <Text style={style.title}> Seja Bem-Vindo! </Text>
+                <Text style={style.title}> Bem-Vindo(a)! </Text>
             </View>
             <View style={style.boxMid}>
-                <Text style={style.titleInput}> E-MAIL: </Text>
                 <View style={style.boxInput}>
                     <TextInput 
                         style={style.input}
+                        placeholder="E-mail"
                     />
                     <MaterialIcons 
                         name= 'email'
-                        size= {20}
+                        size= {25}
                         color= '#4A90E2'
                     />
                 </View>
-                <Text style={style.titleInput}> SENHA: </Text>
                 <View style={style.boxInput}>
                     <TextInput
                         style={style.input}
+                        placeholder="Senha"
+                        secureTextEntry
                     />
                     <MaterialIcons 
-                        name= 'remove-red-eye'
-                        size= {20}
+                        name= 'key'
+                        size= {25}
                         color= '#4A90E2'
                     />
                 </View>
@@ -42,19 +43,21 @@ export const Login = () => {
             <View style={style.boxButton}>
                 <TouchableOpacity 
                     style={style.button}
-                    onPress={() => router.navigate('/sobre-nos')}  
+                    onPress={() => router.navigate('/home')}  
                 >
                     <Text style={style.textButton}> Entrar </Text>
                 </TouchableOpacity>
             </View>
-            <Text style={{color: 'gray', fontSize: 16}}> Não tem conta? 
-                <TouchableOpacity 
-                    style={style.textClick}
-                    onPress={() => router.navigate('/cadastro')}        
-                >
-                    Clique Aqui
-                </TouchableOpacity>
-            </Text>
+            <TouchableOpacity onPress={() => router.navigate('/home')}>
+                <Text 
+                    style={{
+                        color: 'gray',
+                        fontSize: 20, 
+                        marginTop: 30}}
+                > 
+                Acessar como visitante 
+                </Text>
+            </TouchableOpacity>
         </View>
     )
 }

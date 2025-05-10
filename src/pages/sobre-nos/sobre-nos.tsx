@@ -1,55 +1,74 @@
-import { View, Text, Image, TouchableOpacity } from "react-native";
+import { View, Text, Image, TouchableOpacity, Pressable, ScrollView } from "react-native";
 import { useRouter } from "expo-router";
 import { style } from "../sobre-nos/style";
 
-import InstagramLogo from "../../../assets/images/instagram.jpg";
-import FacebookLogo from "../../../assets/images/facebook.jpg";
+import { Ionicons, MaterialCommunityIcons, MaterialIcons } from "@expo/vector-icons";
 
 export const SobreNos = () => {
   const router = useRouter();
 
   return (
-    <View style={style.container}>
-      <Text style={style.title}>INSTITUTO PEQUENOS ANJOS</Text>
-
-      <Text style={style.text}>
-        O Instituto Luta Pela Vida Pequenos Anjos é uma instituição sem fins
-        lucrativos que, há mais de 8 anos, oferece apoio a pacientes de outros
-        estados que vêm em busca de tratamento médico, como consultas, cirurgias
-        e transplantes. A casa de apoio fornece moradia, alimentação, auxílio
-        com consultas, medicamentos e suporte emocional tanto para os pacientes
-        quanto para seus acompanhantes durante todo o tratamento.
-        {"\n\n"}
-        A instituição depende da solidariedade para continuar funcionando,
-        especialmente em tempos de crise, e reforça a importância da ajuda para
-        quem enfrenta doenças e não tem recursos.
-      </Text>
-
-      <View style={style.socialContainer}>
-        <View style={style.socialItem}>
-          <Image source={InstagramLogo} style={style.socialIcon} />
-          <Text style={style.socialText}>@institutopequenosanjosoficial</Text>
-        </View>
-        <View style={style.socialItem}>
-          <Image source={FacebookLogo} style={style.socialIcon} />
-          <Text style={style.socialText}>/Pequenos Anjos</Text>
-        </View>
+    <><View style={style.container}>
+      <View style={style.boxBackButton}>
+        <Pressable>
+          <Ionicons
+            name="arrow-back"
+            size={24}
+            color={'grey'}
+            onPress={() => router.navigate('/home')} />
+        </Pressable>
       </View>
-
-      <Text style={style.address}>
-        Endereço: Rua 2º Tenente Aviador Mário Luiz Figueiroa, 212 - Guarulhos - SP{"\n"}{"\n"}
-        Telefone: (11) 91234-5678
-      </Text>
-
-      <View style={style.buttonContainer}>
-        <TouchableOpacity style={style.button} onPress={() => router.push("/cadastro")}>
-          <Text style={style.buttonText}>Voltar</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity style={style.button} onPress={() => router.push("/nossos-anjinhos")}>
-          <Text style={style.buttonText}>Proximo</Text>
+      <Text style={style.title}> Sobre Nós </Text>
+      <View style={style.boxInfos}>
+        <Text style={style.titleInstituto}> Pequenos Anjos </Text>
+        <ScrollView style={style.scrollView}>
+          <View>
+            <Text style={style.text}>
+              O Instituto Luta Pela Vida Pequenos Anjos é uma instituição não Governamental Sem Fins Lucrativos. {'\n'}{'\n'}
+              Com mais de 8 anos atendendo pacientes que vem para tratamento de outros Estados como Consultas Médicas, Tratamentos, Cirurgias e Transplantes, sabemos o quanto é difícil estar sozinho em busca de tratamento, e acima de tudo o paciente em tratamento e sua família precisa de amparo, carinho e um ambiente que possa proporcionar segurança. {'\n'}{'\n'}
+              Nossa casa de apoio dará Moradia e Alimentação dar ajuda para marcar consultas, remédios, alimentação especial para quem precisa.
+              {'\n'}{'\n'}
+              Todo suporte necessário, para que esses pacientes tenham um bom atendimento, e uma boa recuperação no seu período de tratamento. Oferecemos apoio aos acompanhante e ao paciente, até o termino do tratamento ou tenha seu tratamento controlado. {'\n'}{'\n'}
+              Precisamos de ajuda para manter nossa Casa de Apoio funcionando. {'\n'}{'\n'}
+              Mas isso só será possível se tivermos sua solidariedade, pois o Brasil está em crise, imagina pra quem não tem recurso e nem saúde é muito pior.{'\n'}{'\n'}
+              Missão - Temos como objetivo atender Pacientes que vem de outros Estados tratar do Câncer e outras doenças. {'\n'}{'\n'}
+              Visão - Dar apoio e acolhimento para a recuperação dos Adultos e Crianças.{'\n'}{'\n'}
+              Valores - Solidariedade, respeito, amor ao próximo e caridade a quem mais precisa
+            </Text>
+          </View>
+        </ScrollView>
+      </View>
+      <View style={style.boxButton}>
+        <TouchableOpacity
+          style={style.button}
+        >
+          <Text style={style.textButton}> Tornar-se Voluntário </Text>
         </TouchableOpacity>
       </View>
     </View>
+    <View style={style.containerTabBar}>
+        <View style={style.tabBar}>
+          <TouchableOpacity>
+            <MaterialCommunityIcons
+              name="home"
+              size={45}
+              color={'#083072'}
+              onPress={() => router.navigate('/home')}
+             />
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <MaterialCommunityIcons
+              name="heart"
+              size={45}
+              color={'#EA728D'} />
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <MaterialIcons
+              name="person"
+              size={45}
+              color={'#083072'} />
+          </TouchableOpacity>
+        </View>
+      </View></>
   );
 };
