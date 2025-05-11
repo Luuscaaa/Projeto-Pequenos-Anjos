@@ -14,7 +14,8 @@ export const Home = () => {
                     style={{}} />
                 <TextInput
                     style={style.search}
-                    placeholder="Pesquisar" />
+                    placeholder="Pesquisar"
+                />
             </View>
             <View style={style.boxAbout}>
                 <ImageBackground
@@ -30,12 +31,14 @@ export const Home = () => {
             </View>
             <View style={style.boxOptions}>
                 <View style={style.boxButtons}>
-                    <View style={style.backGroundButtons}>
-                        <MaterialCommunityIcons
-                            name="heart"
-                            size={52}
-                            color={'#EA728D'} />
-                    </View>
+                    <TouchableOpacity onPress={() => router.navigate('/doar')}>
+                        <View style={style.backGroundButtons}>
+                            <MaterialCommunityIcons
+                                name="heart"
+                                size={52}
+                                color={'#EA728D'} />
+                        </View>
+                    </TouchableOpacity>
                     <Text style={style.textCaptionButtons}> Doar </Text>
                 </View>
                 <View style={style.boxButtons}>
@@ -122,7 +125,7 @@ export const Home = () => {
                         color={'#083072'}
                     />
                 </TouchableOpacity>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => router.navigate('/doar')}>
                     <MaterialCommunityIcons
                         name="heart"
                         size={45}

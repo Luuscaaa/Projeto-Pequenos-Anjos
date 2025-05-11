@@ -19,14 +19,14 @@ export const style = StyleSheet.create({
         borderRadius: 8,
         backgroundColor: '#FFFFFF',
         borderColor: '#96C8FF',
-        paddingHorizontal: 5
+        paddingLeft: 5
     },
     search:{
         height: '100%',
         width: '100%',
         borderRadius: 8,
         paddingLeft: 8,
-        fontSize: 18
+        fontSize: 20,
     },
     boxAbout:{
         width: '100%',

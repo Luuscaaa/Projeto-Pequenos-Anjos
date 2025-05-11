@@ -1,80 +1,89 @@
-import { Dimensions, StyleSheet } from "react-native";
+import { StyleSheet } from "react-native";
+
 
 export const style = StyleSheet.create({
-    container:{
+    container: {
         flex: 1,
-        justifyContent: 'center',
+        backgroundColor: '#E6F0FB',
+        paddingHorizontal: 30,
         alignItems: 'center',
-        backgroundColor: '#E6F0FA'
     },
-    boxTop:{
-        height: Dimensions.get('window').height/2,
+    boxBackButton: {
+        marginTop: 40,
         width: '100%',
-        paddingHorizontal: 37,
-        marginTop: 10,
-        justifyContent: 'center',
+        maxWidth: 700,
     },
-    boxBottom:{
-
+    title: {
+        fontSize: 35,
+        color: '#083072',
+        fontWeight: 'bold',
     },
-    boxButton:{
-        height: Dimensions.get('window').height/4,
+    boxForm: {
         width: '100%',
-        alignItems: 'center',
-        padding: 30,
-    },
-    titleInput:{
-        marginLeft: 5,
-        color: 'gray',
-        marginTop: 20,
-    },
-    boxInput:{
-        width: '100%',
-        height: 40,
-        borderRadius: 15,
-        borderWidth: 1,
-        marginTop: 10, 
-        flexDirection: 'row',
-        alignItems: 'center',
-        paddingHorizontal: 5,
-        backgroundColor: '#FFFFFF'
+        maxWidth: 700,
+        marginTop: 50,
     },
     input: {
-        height: '90%',
-        width: '90%',
-        borderRadius: 15,
-        paddingLeft: 5,
-        outlineColor: '#FFFFFF',
-        backgroundColor: '#FFFFFF', 
+        height: 60,
+        width: '100%',
+        borderRadius: 8,
+        borderWidth: 2,
+        paddingLeft: 10,
+        borderColor: '#96C8FF',
+        outlineColor: '#96C8FF',
+        backgroundColor: '#FFFFFF',
+        fontSize: 20,
+        marginBottom: 20,
+    },
+    inputText: {
+        height: 180,
+        width: '100%',
+        borderRadius: 8,
+        borderWidth: 2,
+        paddingLeft: 10,
+        borderColor: '#96C8FF',
+        outlineColor: '#96C8FF',
+        backgroundColor: '#FFFFFF',
+        fontSize: 20,
+        marginBottom: 30,
+        paddingTop: 10,
+    },
+    boxButton:{
+        width: '100%',
+        maxWidth: 700,
+        alignItems: 'center'
     },
     button:{
-        width: '80%',
-        height: 50,
-        backgroundColor: '#F6A5C0',
+        width: '100%',
+        height: 60,
+        backgroundColor: '#083072',
         alignItems: 'center',
         justifyContent: 'center',
-        borderRadius: 20,
-        shadowColor: '#000',
-        shadowOffset: {
-            width: 0,
-            height: 2,
-        },
-        shadowOpacity: 0.2,
-        shadowRadius: 4,
-        elevation: 3,
-        paddingVertical: 12
+        borderRadius: 8,
+        marginTop: 20
     },
     textButton:{
-        fontSize: 20,
+        fontSize: 22,
         color: 'white',
         fontWeight: 'bold'
     },
-    login:{
-        marginLeft: 5,
-        color: '#878af6'
+    containerTabBar:{
+        width: '100%',
+        height: 80,
+        backgroundColor: '#E6F0FB',
+        alignItems: 'center',
+        justifyContent: 'center'
     },
-    textClick:{
-        color: '#878af6',
-        fontSize: 16
+    tabBar:{
+        width:'100%',
+        maxWidth: 700,
+        height:'100%',
+        borderWidth: 1,
+        borderColor: 'rgba(5, 5, 5, 0.3)',
+        backgroundColor: 'white',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        paddingHorizontal: 30
     }
-})
+});

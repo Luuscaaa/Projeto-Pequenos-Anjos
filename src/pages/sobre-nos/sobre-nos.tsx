@@ -41,6 +41,7 @@ export const SobreNos = () => {
       <View style={style.boxButton}>
         <TouchableOpacity
           style={style.button}
+          onPress={() => router.navigate('/cadastro')}
         >
           <Text style={style.textButton}> Tornar-se Voluntário </Text>
         </TouchableOpacity>

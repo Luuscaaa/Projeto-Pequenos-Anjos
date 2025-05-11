@@ -1,52 +1,75 @@
-import { Text, TextInput, TouchableOpacity, View } from "react-native"
-import { style } from '../cadastro/style'
+import { Pressable, Text, TextInput, TouchableOpacity, View } from "react-native"
+import { style } from "./style"
 import { router } from "expo-router"
+import { Ionicons, MaterialCommunityIcons, MaterialIcons } from "@expo/vector-icons"
 
 export const Cadastro = () => {
     return(
-        <View style={style.container}>
-            <View style={style.boxTop}>
-                <Text style={style.titleInput}> NOME COMPLETO: </Text>
-                <View style={style.boxInput}>
-                    <TextInput 
-                        style={style.input}
-                    />
-                </View>
-                <Text style={style.titleInput}> E-MAIL: </Text>
-                <View style={style.boxInput}>
-                    <TextInput 
-                        style={style.input}
-                    />
-                </View>
-                <Text style={style.titleInput}> ENDEREÇO: </Text>
-                <View style={style.boxInput}>
-                    <TextInput 
-                        style={style.input}
-                    />
-                </View>
-                <Text style={style.titleInput}> SENHA: </Text>
-                <View style={style.boxInput}>
-                    <TextInput 
-                        style={style.input}
-                    />
-                </View>
+        <><View style={style.container}>
+            <View style={style.boxBackButton}>
+                <Pressable>
+                    <Ionicons
+                        name="arrow-back"
+                        size={24}
+                        color={'grey'}
+                        onPress={() => router.navigate('/sobre-nos')} />
+                </Pressable>
+            </View>
+            <Text style={style.title}> Voluntário </Text>
+            <View style={style.boxForm}>
+                <TextInput
+                    style={style.input}
+                    placeholder="Nome Completo"
+                ></TextInput>
+                <TextInput
+                    style={style.input}
+                    placeholder="Telefone"
+                ></TextInput>
+                <TextInput
+                    style={style.input}
+                    placeholder="E-mail"
+                ></TextInput>
+                <TextInput
+                    style={style.input}
+                    placeholder="Endereço"
+                ></TextInput>
+                <TextInput
+                    style={style.inputText}
+                    multiline
+                    placeholder="Fale um pouco sobre você..."
+                ></TextInput>
             </View>
             <View style={style.boxButton}>
-                <TouchableOpacity 
+                <TouchableOpacity
                     style={style.button}
-                    onPress={() => router.navigate('/sobre-nos')}  
+                    onPress={() => router.navigate('/cadastro')}
                 >
                     <Text style={style.textButton}> Cadastrar </Text>
                 </TouchableOpacity>
             </View>
-            <View style={{ flexDirection: 'row', justifyContent: 'center', paddingBottom: 50 }}>
-                <Text style={{ color: 'gray', fontSize: 16 }}>Ja tem conta? </Text>
-                <TouchableOpacity onPress={() => router.navigate('/')}>
-                    <Text style={style.textClick}>
-                        Login
-                    </Text>
+        </View>
+        <View style={style.containerTabBar}>
+            <View style={style.tabBar}>
+                <TouchableOpacity>
+                    <MaterialCommunityIcons
+                        name="home"
+                        size={45}
+                        color={'#083072'}
+                        onPress={() => router.navigate('/home')} />
+                </TouchableOpacity>
+                <TouchableOpacity>
+                    <MaterialCommunityIcons
+                        name="heart"
+                        size={45}
+                        color={'#EA728D'} />
+                </TouchableOpacity>
+                <TouchableOpacity>
+                    <MaterialIcons
+                        name="person"
+                        size={45}
+                        color={'#083072'} />
                 </TouchableOpacity>
             </View>
-        </View>
+        </View></>
     )
 }

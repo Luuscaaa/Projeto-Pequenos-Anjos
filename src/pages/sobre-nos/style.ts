@@ -45,7 +45,7 @@ export const style = StyleSheet.create({
   },
   boxButton:{
     width: '100%',
-    maxWidth: 1000,
+    maxWidth: 700,
     alignItems: 'center'
   },
   button:{
