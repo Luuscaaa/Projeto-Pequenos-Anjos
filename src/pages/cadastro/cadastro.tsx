@@ -61,7 +61,8 @@ export const Cadastro = () => {
                     <MaterialCommunityIcons
                         name="heart"
                         size={45}
-                        color={'#EA728D'} />
+                        color={'#EA728D'} 
+                        onPress={() => router.navigate('/doar')} />
                 </TouchableOpacity>
                 <TouchableOpacity>
                     <MaterialIcons

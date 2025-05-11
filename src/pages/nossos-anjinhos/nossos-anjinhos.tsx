@@ -1,43 +1,133 @@
-import { View, Text, Image, TouchableOpacity, ScrollView } from "react-native";
+import { View, Text, Image, TouchableOpacity, Pressable, ScrollView, ImageBackground, ImageSourcePropType } from "react-native";
 import { useRouter } from "expo-router";
+import { Ionicons, MaterialCommunityIcons, MaterialIcons } from "@expo/vector-icons";
 import { style } from "../nossos-anjinhos/style";
+import AppIntroSlider from 'react-native-app-intro-slider'
+import React, { useState } from "react";
 
-import anjinho1 from "../../../assets/images/ana.jpg";
-import anjinho2 from "../../../assets/images/joao.jpg";
-import anjinho3 from "../../../assets/images/maria.jpg";
-import anjinho4 from "../../../assets/images/lucas.jpg";
-import anjinho5 from "../../../assets/images/geovanne.jpg";
-import anjinho6 from "../../../assets/images/nathalia.jpg";
+type Crianca = {
+  key: string,
+  nome: string;
+  idade: number;
+  descricao: string;
+  imagem: ImageSourcePropType;
+};
+
+const criancas: Crianca[] = [
+  
+  {
+    key: '1',
+    nome: 'Laura',
+    idade: 3,
+    descricao:'Precisa de tratamento odontológico para cuidar da sua saúde bucal devido a cáries e má higienização. Precisa de tratamento odontológico para cuidar da sua saúde bucal devido a cáries e má higienização.',
+    imagem: require('../../assets/images/agasalhos.jpg'),
+  },
+  {
+    key: '2',
+    nome: 'Rafael',
+    idade: 4,
+    descricao:'Precisa de óculos para correção de visão e apoio no aprendizado escolar.',
+    imagem: require('../../../assets/images/ana.jpg'),
+  },
+  {
+    key: '3',
+    nome: 'Ana',
+    idade: 5,
+    descricao:'Precisa de sessões de fonoaudiologia para melhorar sua comunicação.',
+    imagem: require('../../assets/images/agasalhos.jpg'),
+  },
+  {
+    key: '3',
+    nome: 'Ana',
+    idade: 5,
+    descricao:'Precisa de sessões de fonoaudiologia para melhorar sua comunicação.',
+    imagem: require('../../assets/images/agasalhos.jpg'),
+  },
+  {
+    key: '3',
+    nome: 'Ana',
+    idade: 5,
+    descricao:'Precisa de sessões de fonoaudiologia para melhorar sua comunicação.',
+    imagem: require('../../assets/images/agasalhos.jpg'),
+  },
+  {
+    key: '3',
+    nome: 'Ana',
+    idade: 5,
+    descricao:'Precisa de sessões de fonoaudiologia para melhorar sua comunicação.',
+    imagem: require('../../assets/images/agasalhos.jpg'),
+  },
+  {
+    key: '3',
+    nome: 'Ana',
+    idade: 5,
+    descricao:'Precisa de sessões de fonoaudiologia para melhorar sua comunicação.',
+    imagem: require('../../assets/images/agasalhos.jpg'),
+  },
+  {
+    key: '3',
+    nome: 'Ana',
+    idade: 5,
+    descricao:'Precisa de sessões de fonoaudiologia para melhorar sua comunicação.',
+    imagem: require('../../assets/images/agasalhos.jpg'),
+  },
+  {
+    key: '3',
+    nome: 'Ana',
+    idade: 5,
+    descricao:'Precisa de sessões de fonoaudiologia para melhorar sua comunicação.',
+    imagem: require('../../assets/images/agasalhos.jpg'),
+  },
+  
+];
 
 export const NossosAnjinhos = () => {
+
   const router = useRouter();
 
-  const anjinhos = [
-    { id: 1, nome: "Ana Clara", idade: "6 anos", imagem: anjinho1 },
-    { id: 2, nome: "João Pedro", idade: "8 anos", imagem: anjinho2 },
-    { id: 3, nome: "Maria Eduarda", idade: "5 anos", imagem: anjinho3 },
-    { id: 4, nome: "Lucas Gabriel", idade: "7 anos", imagem: anjinho4 },
-    { id: 4, nome: "Geovanne Silva", idade: "3 anos", imagem: anjinho5 },
-    { id: 4, nome: "Nathalia", idade: "4 anos", imagem: anjinho6 },
-  ];
+  function renderCards ({ item }: { item: Crianca }): any{
+    return(
+      <View style={style.containCards}>
+        <Image
+          source={ item.imagem }
+          style={style.image}
+        />
+        <View style={style.boxDados}>
+          <Text style={style.name}> {item.nome} </Text>
+          <Text style={style.age}> {item.idade} </Text>
+          <Text style={style.age}> anos </Text>          
+        </View>
+        <View style={style.viewScroll}>
+          <ScrollView style={style.scrollView}>
+              <Text style={style.text}>{item.descricao}</Text>
+          </ScrollView>
+        </View>
+      </View>
+    )
+  }
 
   return (
-    <ScrollView contentContainerStyle={style.container}>
-      <Text style={style.title}>CONHEÇA OS NOSSOS ANJINHOS</Text>
-
-      <View style={style.cardContainer}>
-        {anjinhos.map((anjinho) => (
-          <View key={anjinho.id} style={style.card}>
-            <Image source={anjinho.imagem} style={style.cardImage} />
-            <Text style={style.cardName}>{anjinho.nome}</Text>
-            <Text style={style.cardAge}>{anjinho.idade}</Text>
-          </View>
-        ))}
+    <View style={style.container}>
+      <View style={style.boxBackButton}>
+        <Pressable>
+          <Ionicons
+            name="arrow-back"
+            size={24}
+            color={'grey'}
+            onPress={() => router.navigate('/home')} />
+        </Pressable>
       </View>
-
-      <TouchableOpacity style={style.button} onPress={() => router.push("/sobre-nos")}>
-        <Text style={style.buttonText}>Voltar</Text>
-      </TouchableOpacity>
-    </ScrollView>
+      <Text style={style.title}> Anjinhos </Text>
+      <View style={style.boxCard}>
+        <AppIntroSlider
+          renderItem={renderCards}
+          data={criancas}
+          activeDotStyle={{
+            backgroundColor: '#009CFF',
+            width: 30
+          }}
+        />
+      </View>
+    </View>
   );
 };

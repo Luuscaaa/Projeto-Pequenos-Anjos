@@ -1,6 +1,11 @@
 import { Doar } from "@/src/pages/doar/doar";
+import { Provider as PaperProvider } from 'react-native-paper';
 
 
 export default function DoarPage () {
-    return <Doar/>
+    return (
+        <PaperProvider>
+            <Doar />
+        </PaperProvider>
+    )
 }

@@ -42,12 +42,14 @@ export const Home = () => {
                     <Text style={style.textCaptionButtons}> Doar </Text>
                 </View>
                 <View style={style.boxButtons}>
-                    <View style={style.backGroundButtons}>
-                        <MaterialIcons
-                            name="people"
-                            size={52}
-                            color={'#083072'} />
-                    </View>
+                    <TouchableOpacity onPress={() => router.navigate('/nossos-anjinhos')}>
+                        <View style={style.backGroundButtons}>
+                            <MaterialIcons
+                                name="people"
+                                size={52}
+                                color={'#083072'} />
+                        </View>
+                    </TouchableOpacity>
                     <Text style={style.textCaptionButtons}> Conhecer {'\n'} Anjinhos </Text>
                 </View>
                 <View style={style.boxButtons}>

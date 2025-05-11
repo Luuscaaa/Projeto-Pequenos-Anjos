@@ -1,86 +1,67 @@
 import { StyleSheet } from "react-native";
 
 export const style = StyleSheet.create({
-  container: {
-    flexGrow: 1,
-    alignItems: "center",
-    paddingVertical: 20,
-    backgroundColor: "#EAF2FA",
-  },
-
-  title: {
-    fontSize: 22,
-    fontWeight: "700",
-    color: "#004AAD",
-    marginTop: 20,
-    marginBottom: 50,
-  },
-
-  cardContainer: {
-    flexDirection: "row",
-    flexWrap: "wrap",
-    justifyContent: "space-evenly",
-    marginTop: 20,
-    gap: 25,
-    paddingHorizontal: 20,
-  },
-
-  card: {
-    width: 150,
-    alignItems: "center",
-    backgroundColor: "#fff",
-    borderRadius: 12,
-    padding: 10,
-    shadowColor: "#000",
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.1,
-    shadowRadius: 3,
-    elevation: 2,
-  },
-
-  cardImage: {
-    width: 100,
-    height: 100,
-    borderRadius: 50,
-    marginBottom: 10,
-  },
-
-  cardName: {
-    fontSize: 16,
-    fontWeight: "600",
-    color: "#333",
-  },
-
-  cardAge: {
-    fontSize: 14,
-    color: "#666",
-  },
-
-  button: {
-    width: 115,
-    height: 50,
-    backgroundColor: '#F6A5C0',
-    marginTop: 50,
+  container:{
+    flex: 1,
+    backgroundColor: '#E6F0FB',
+    paddingHorizontal: 30,
     alignItems: 'center',
-    justifyContent: 'center',
-    borderRadius: 20,
-    shadowColor: '#000',
-    shadowOffset: {
-        width: 0,
-        height: 2,
-    },
-    shadowOpacity: 0.2,
-    shadowRadius: 4,
-    elevation: 3,
-    paddingVertical: 12
   },
-  buttonContainer:{
-    justifyContent: 'center',
-  },
+  boxBackButton:{
+    marginTop: 40,
+    width: '100%',
+    maxWidth: 700,
 
-  buttonText: {
-    color: "#fff",
+  },
+  title:{
+    fontSize: 35,
+    color: '#083072',
+    fontWeight: 'bold',
+  },
+  boxCard:{
+    width: '100%',
+    maxWidth: 700,
+    height: 500,
+    backgroundColor: 'white',
+    marginTop: 50,
+    padding: 20,
+    borderRadius: 8
+  },
+  containCards:{
+    width: '100%',
+    height: 250,
+  },
+  image:{
+    width: '100%',
+    height: '100%',
+    borderRadius: 8,
+  },
+  boxDados:{
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginTop: 5
+  },
+  name:{
+    fontSize: 35,
+    fontWeight: 'bold'
+  },
+  age:{
+    fontSize: 20,
+    fontWeight: '600',
+    marginRight: -5,
+    marginTop: 10
+  },
+  viewScroll:{
+    width: '100%',
+    height: 100,
+  },
+  scrollView:{
+    marginTop: 10,
+    borderRadius: 8,
+    padding: 10,
+  },
+  text:{
     fontSize: 18,
-    fontWeight: "bold",
+    textAlign: 'justify',
   },
 });
