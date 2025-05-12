@@ -107,7 +107,7 @@ export const NossosAnjinhos = () => {
   }
 
   return (
-    <View style={style.container}>
+    <><View style={style.container}>
       <View style={style.boxBackButton}>
         <Pressable>
           <Ionicons
@@ -125,9 +125,40 @@ export const NossosAnjinhos = () => {
           activeDotStyle={{
             backgroundColor: '#009CFF',
             width: 30
-          }}
-        />
+          }} />
+      </View>
+      <View style={style.boxButton}>
+          <TouchableOpacity
+              style={style.button}
+              onPress={() => router.navigate('/doar')}
+          >
+              <Text style={style.textButton}> Doar </Text>
+          </TouchableOpacity>
       </View>
     </View>
+    <View style={style.containerTabBar}>
+        <View style={style.tabBar}>
+          <TouchableOpacity>
+            <MaterialCommunityIcons
+              name="home"
+              size={45}
+              color={'#083072'}
+              onPress={() => router.navigate('/home')} />
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <MaterialCommunityIcons
+              name="heart"
+              size={45}
+              color={'#EA728D'}
+              onPress={() => router.navigate('/doar')} />
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <MaterialIcons
+              name="person"
+              size={45}
+              color={'#083072'} />
+          </TouchableOpacity>
+        </View>
+      </View></>
   );
 };

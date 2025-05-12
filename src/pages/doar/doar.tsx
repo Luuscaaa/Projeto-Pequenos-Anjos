@@ -87,33 +87,33 @@ export const Doar = () => {
                     style={style.button}
                     onPress={() => router.navigate('/doar')}
                 >
-                    <Text style={style.textButton}> Doar </Text>
+                    <Text style={style.textButton}> Fazer Doação </Text>
                 </TouchableOpacity>
             </View>
         </View>
-            <View style={style.containerTabBar}>
-                <View style={style.tabBar}>
-                    <TouchableOpacity>
-                        <MaterialCommunityIcons
-                            name="home"
-                            size={45}
-                            color={'#083072'}
-                            onPress={() => router.navigate('/home')} />
-                    </TouchableOpacity>
-                    <TouchableOpacity>
-                        <MaterialCommunityIcons
-                            name="heart"
-                            size={45}
-                            color={'#EA728D'}
-                            onPress={() => router.navigate('/doar')} />
-                    </TouchableOpacity>
-                    <TouchableOpacity>
-                        <MaterialIcons
-                            name="person"
-                            size={45}
-                            color={'#083072'} />
-                    </TouchableOpacity>
-                </View>
-            </View></>
+        <View style={style.containerTabBar}>
+            <View style={style.tabBar}>
+                <TouchableOpacity>
+                    <MaterialCommunityIcons
+                        name="home"
+                        size={45}
+                        color={'#083072'}
+                        onPress={() => router.navigate('/home')} />
+                </TouchableOpacity>
+                <TouchableOpacity>
+                    <MaterialCommunityIcons
+                        name="heart"
+                        size={45}
+                        color={'#EA728D'}
+                        onPress={() => router.navigate('/doar')} />
+                </TouchableOpacity>
+                <TouchableOpacity>
+                    <MaterialIcons
+                        name="person"
+                        size={45}
+                        color={'#083072'} />
+                </TouchableOpacity>
+            </View>
+        </View></>
     )
 }

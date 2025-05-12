@@ -64,4 +64,43 @@ export const style = StyleSheet.create({
     fontSize: 18,
     textAlign: 'justify',
   },
+  boxButton:{
+    width: '100%',
+    maxWidth: 700,
+    alignItems: 'center',
+    marginTop: 30
+    },
+  button:{
+    width: '100%',
+    height: 60,
+    backgroundColor: '#EA728D',
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 8,
+    marginTop: 20
+  },
+  textButton:{
+    fontSize: 22,
+    color: 'white',
+    fontWeight: 'bold'
+  },
+  containerTabBar:{
+    width: '100%',
+    height: 80,
+    backgroundColor: '#E6F0FB',
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  tabBar:{
+    width:'100%',
+    maxWidth: 700,
+    height:'100%',
+    borderWidth: 1,
+    borderColor: 'rgba(5, 5, 5, 0.3)',
+    backgroundColor: 'white',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingHorizontal: 30
+  }
 });

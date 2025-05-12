@@ -20,7 +20,12 @@ export const SobreNos = () => {
       </View>
       <Text style={style.title}> Sobre Nós </Text>
       <View style={style.boxInfos}>
-        <Text style={style.titleInstituto}> Pequenos Anjos </Text>
+        <Text style={{
+          alignSelf: 'flex-start',
+          fontSize: 20,
+          fontWeight: 'bold'
+        }}>Instituto</Text>
+        <Text style={style.titleInstituto}>Pequenos Anjos </Text>
         <ScrollView style={style.scrollView}>
           <View>
             <Text style={style.text}>
