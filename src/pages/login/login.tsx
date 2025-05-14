@@ -48,12 +48,22 @@ export const Login = () => {
                     <Text style={style.textButton}> Entrar </Text>
                 </TouchableOpacity>
             </View>
-            <TouchableOpacity onPress={() => router.navigate('/home')}>
+            <TouchableOpacity onPress={() => router.navigate('/cadastro-usuario')}>
                 <Text 
                     style={{
                         color: 'gray',
                         fontSize: 20, 
                         marginTop: 30}}
+                > 
+                Criar conta? Clique aqui
+                </Text>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => router.navigate('/home')}>
+                <Text 
+                    style={{
+                        color: 'gray',
+                        fontSize: 20, 
+                        marginTop: 20}}
                 > 
                 Acessar como visitante 
                 </Text>

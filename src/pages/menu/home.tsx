@@ -11,7 +11,8 @@ export const Home = () => {
                     name='search'
                     size={30}
                     color={'#083072'}
-                    style={{}} />
+                    style={{}} 
+                />
                 <TextInput
                     style={style.search}
                     placeholder="Pesquisar"

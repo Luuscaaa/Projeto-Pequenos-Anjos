@@ -31,7 +31,8 @@ export default function RootLayout() {
     <ThemeProvider value={DefaultTheme}>
       <Stack>
         <Stack.Screen name="index" options={{ headerShown: false }} />
-        <Stack.Screen name="(panel)/cadastro" options={{ headerShown: false }} />
+        <Stack.Screen name="(panel)/cadastro-voluntario" options={{ headerShown: false }} />
+        <Stack.Screen name="(panel)/cadastro-usuario" options={{ headerShown: false }} />
         <Stack.Screen name="(panel)/sobre-nos" options={{ headerShown: false }} />
         <Stack.Screen name="(panel)/nossos-anjinhos" options={{ headerShown: false }} />
         <Stack.Screen name="(panel)/home" options={{ headerShown: false }} />

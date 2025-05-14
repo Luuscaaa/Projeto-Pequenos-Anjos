@@ -22,11 +22,14 @@ export const style = StyleSheet.create({
         paddingLeft: 5
     },
     search:{
-        height: '100%',
-        width: '100%',
+        height: '99%',
+        width: '99%',
         borderRadius: 8,
         paddingLeft: 8,
         fontSize: 20,
+        borderColor: 'transparent',
+        borderWidth: 0,
+        borderBottomWidth: 0,
     },
     boxAbout:{
         width: '100%',

@@ -3,7 +3,7 @@ import { style } from "./style"
 import { router } from "expo-router"
 import { Ionicons, MaterialCommunityIcons, MaterialIcons } from "@expo/vector-icons"
 
-export const Cadastro = () => {
+export const CadastroUsuario = () => {
     return(
         <><View style={style.container}>
             <View style={style.boxBackButton}>
@@ -12,7 +12,7 @@ export const Cadastro = () => {
                         name="arrow-back"
                         size={24}
                         color={'grey'}
-                        onPress={() => router.navigate('/sobre-nos')} />
+                        onPress={() => router.navigate('/login')} />
                 </Pressable>
             </View>
             <Text style={style.title}> Voluntário </Text>
@@ -34,15 +34,18 @@ export const Cadastro = () => {
                     placeholder="Endereço"
                 ></TextInput>
                 <TextInput
-                    style={style.inputText}
-                    multiline
-                    placeholder="Fale um pouco sobre você..."
+                    style={style.input}
+                    placeholder="CPF"
+                ></TextInput>
+                <TextInput
+                    style={style.input}
+                    placeholder="Profissão"
                 ></TextInput>
             </View>
             <View style={style.boxButton}>
                 <TouchableOpacity
                     style={style.button}
-                    onPress={() => router.navigate('/cadastro')}
+                    onPress={() => router.navigate('/home')}
                 >
                     <Text style={style.textButton}> Cadastrar </Text>
                 </TouchableOpacity>
