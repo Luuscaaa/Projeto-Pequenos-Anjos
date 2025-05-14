@@ -36,6 +36,7 @@ export default function RootLayout() {
         <Stack.Screen name="(panel)/nossos-anjinhos" options={{ headerShown: false }} />
         <Stack.Screen name="(panel)/home" options={{ headerShown: false }} />
         <Stack.Screen name="(panel)/doar" options={{ headerShown: false }} />
+        <Stack.Screen name="(auth)/login" options={{ headerShown: false }} />
       </Stack>
       <StatusBar style="auto" />
     </ThemeProvider>

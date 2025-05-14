@@ -41,7 +41,8 @@ export const style = StyleSheet.create({
   },
   text:{
     fontSize: 16,
-    textAlign: 'justify'
+    textAlign: 'justify',
+    marginTop: 10
   },
   boxButton:{
     width: '100%',

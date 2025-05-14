@@ -48,12 +48,21 @@ export const style = StyleSheet.create({
         borderWidth: 2,
         borderColor: '#96C8FF',
         borderRadius: 8,
-        opacity: 0.5
+    },
+    boxTextImage:{
+        width: '100%',
+        alignItems: 'center',
+        justifyContent: 'center',
+        maxWidth: 700
     },
     textImage:{
         fontSize: 30,
         fontWeight: 'bold',
         color: '#083072',
+        width: '100%',
+        maxWidth: 700,
+        backgroundColor: 'rgba(255, 255, 255, 0.5)',
+        textAlign: 'center',
     },
     boxOptions:{
         width: '100%',
@@ -111,13 +120,13 @@ export const style = StyleSheet.create({
     },
     imageCampaignBorder:{
         borderRadius: 8,
-        opacity: 0.4
     },
     textCampaign:{
         fontSize: 22,
         textAlign: 'center',
         color: '#083072',
         fontWeight: 'bold',
+        backgroundColor: 'rgba(255, 255, 255, 0.5)',
     },
     scrollView:{
         marginBottom: 10,

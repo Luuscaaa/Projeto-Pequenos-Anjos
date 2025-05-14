@@ -1,0 +1,40 @@
+{
+  "criancas": [
+    {
+      "id": 1,
+      "nome": "Lucas",
+      "idade": 7,
+      "descricao": "Precisa de uma cadeira de rodas adaptada para continuar frequentando a escola com conforto e segurança.",
+      "foto": "https://media.istockphoto.com/id/1399611777/pt/foto/portrait-of-a-smiling-little-brown-haired-boy-looking-at-the-camera-happy-kid-with-good.jpg?s=612x612&w=0&k=20&c=7Jcx5NsIbyqPE2xWamyWQtuwECSox0wmoXvat3elBX8="
+    },
+    {
+      "id": 2,
+      "nome": "Ana",
+      "idade": 9,
+      "descricao": "Realiza tratamento contínuo contra uma doença rara e a família precisa de ajuda com os custos das medicações.",
+      "foto": "https://media.istockphoto.com/id/1354059625/pt/foto/small-girl-smiling-on-the-street.jpg?s=612x612&w=0&k=20&c=LxB8YsFpAj_BG4ARpzxAXY1yDQtIE4ZZNbgPEac9hRw="
+    },
+    {
+      "id": 3,
+      "nome": "Rafael",
+      "idade": 6,
+      "descricao": "Tem deficiência auditiva e sonha em ter um aparelho auditivo novo para conseguir interagir melhor com os colegas.",
+      "foto": "https://media.istockphoto.com/id/1400096665/pt/foto/portrait-of-a-cute-little-asian-boy-wearing-casual-clothes-while-smiling-and-looking-excited.jpg?s=612x612&w=0&k=20&c=j3mwUii50vBmY4aP4HwI_8ARFGZMDpFg3FCJGBixvU8="
+    },
+    {
+      "id": 4,
+      "nome": "Sofia",
+      "idade": 11,
+      "descricao": "Está em tratamento contra leucemia e precisa de apoio para cobrir os custos com exames e alimentação especial.",
+      "foto": "https://media.istockphoto.com/id/1367330095/pt/foto/portrait-of-a-girl-taking-notes-in-the-classroom.jpg?s=612x612&w=0&k=20&c=Bz-9PgwYf6ZqIiZwnljdLWCffTyYCL7Cem2Zk3ueBlw="
+    },
+    {
+      "id": 5,
+      "nome": "Enzo",
+      "idade": 8,
+      "descricao": "Tem um distúrbio do desenvolvimento e precisa de materiais educativos adaptados para aprender em casa.",
+      "foto": "https://media.istockphoto.com/id/1357352061/pt/foto/smiling-african-american-child-school-boy-doing-homework-while-sitting-at-desk-at-home.jpg?s=612x612&w=0&k=20&c=krm3lCDrJSBtP3l7SD7YoDRVD8NG9RO0efSXizMdJ5E="
+    }
+  ]
+}
+

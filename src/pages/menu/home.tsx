@@ -24,7 +24,10 @@ export const Home = () => {
                     style={style.imageBackground}
                     imageStyle={style.imageBorder}
                 >
-                    <TouchableOpacity onPress={() => router.navigate('/sobre-nos')}>
+                    <TouchableOpacity 
+                        onPress={() => router.navigate('/sobre-nos')}
+                        style={style.boxTextImage}
+                    >
                         <Text style={style.textImage}> Sobre o Instituto </Text>
                     </TouchableOpacity>
                 </ImageBackground>

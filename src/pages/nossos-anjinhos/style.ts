@@ -39,17 +39,18 @@ export const style = StyleSheet.create({
   boxDados:{
     flexDirection: 'row',
     alignItems: 'center',
-    marginTop: 5
+    marginTop: 5,
+    marginLeft: 7
   },
   name:{
     fontSize: 35,
-    fontWeight: 'bold'
+    fontWeight: 'bold',
   },
   age:{
     fontSize: 20,
     fontWeight: '600',
-    marginRight: -5,
-    marginTop: 10
+    marginLeft: 18,
+    marginTop: 7,
   },
   viewScroll:{
     width: '100%',
@@ -62,7 +63,7 @@ export const style = StyleSheet.create({
   },
   text:{
     fontSize: 18,
-    textAlign: 'justify',
+    textAlign: 'auto',
   },
   boxButton:{
     width: '100%',

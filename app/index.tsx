@@ -1,5 +1,5 @@
-import { Login } from "@/src/pages/login/login";
+import { Loading } from "@/src/pages/loading/loading";
 
-export default function LoginPage () {
-    return <Login/>
+export default function SplashScreenPage () {
+    return <Loading/>
 }

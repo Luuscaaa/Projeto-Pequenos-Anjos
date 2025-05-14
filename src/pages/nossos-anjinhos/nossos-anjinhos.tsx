@@ -3,107 +3,46 @@ import { useRouter } from "expo-router";
 import { Ionicons, MaterialCommunityIcons, MaterialIcons } from "@expo/vector-icons";
 import { style } from "../nossos-anjinhos/style";
 import AppIntroSlider from 'react-native-app-intro-slider'
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
-type Crianca = {
-  key: string,
+interface Crianca {
+  id: number;
   nome: string;
   idade: number;
   descricao: string;
-  imagem: ImageSourcePropType;
-};
+  foto: string;
+}
 
-const criancas: Crianca[] = [
-  
-  {
-    key: '1',
-    nome: 'Laura',
-    idade: 3,
-    descricao:'Precisa de tratamento odontológico para cuidar da sua saúde bucal devido a cáries e má higienização. Precisa de tratamento odontológico para cuidar da sua saúde bucal devido a cáries e má higienização.',
-    imagem: require('../../assets/images/agasalhos.jpg'),
-  },
-  {
-    key: '2',
-    nome: 'Rafael',
-    idade: 4,
-    descricao:'Precisa de óculos para correção de visão e apoio no aprendizado escolar.',
-    imagem: require('../../../assets/images/ana.jpg'),
-  },
-  {
-    key: '3',
-    nome: 'Ana',
-    idade: 5,
-    descricao:'Precisa de sessões de fonoaudiologia para melhorar sua comunicação.',
-    imagem: require('../../assets/images/agasalhos.jpg'),
-  },
-  {
-    key: '3',
-    nome: 'Ana',
-    idade: 5,
-    descricao:'Precisa de sessões de fonoaudiologia para melhorar sua comunicação.',
-    imagem: require('../../assets/images/agasalhos.jpg'),
-  },
-  {
-    key: '3',
-    nome: 'Ana',
-    idade: 5,
-    descricao:'Precisa de sessões de fonoaudiologia para melhorar sua comunicação.',
-    imagem: require('../../assets/images/agasalhos.jpg'),
-  },
-  {
-    key: '3',
-    nome: 'Ana',
-    idade: 5,
-    descricao:'Precisa de sessões de fonoaudiologia para melhorar sua comunicação.',
-    imagem: require('../../assets/images/agasalhos.jpg'),
-  },
-  {
-    key: '3',
-    nome: 'Ana',
-    idade: 5,
-    descricao:'Precisa de sessões de fonoaudiologia para melhorar sua comunicação.',
-    imagem: require('../../assets/images/agasalhos.jpg'),
-  },
-  {
-    key: '3',
-    nome: 'Ana',
-    idade: 5,
-    descricao:'Precisa de sessões de fonoaudiologia para melhorar sua comunicação.',
-    imagem: require('../../assets/images/agasalhos.jpg'),
-  },
-  {
-    key: '3',
-    nome: 'Ana',
-    idade: 5,
-    descricao:'Precisa de sessões de fonoaudiologia para melhorar sua comunicação.',
-    imagem: require('../../assets/images/agasalhos.jpg'),
-  },
-  
-];
 
 export const NossosAnjinhos = () => {
-
   const router = useRouter();
+  const [dados, setDados] = useState<Crianca[]>([]);
 
-  function renderCards ({ item }: { item: Crianca }): any{
-    return(
+  useEffect(() => {
+    fetch('http://localhost:3000/criancas') // troque pelo IP da sua máquina
+      .then(res => res.json())
+      .then(json => setDados(json))
+      .catch(err => console.error(err));
+  }, []);
+
+  function renderCards({ item }: { item: Crianca }) {
+    return (
       <View style={style.containCards}>
         <Image
-          source={ item.imagem }
+          source={{ uri: item.foto }}
           style={style.image}
         />
         <View style={style.boxDados}>
-          <Text style={style.name}> {item.nome} </Text>
-          <Text style={style.age}> {item.idade} </Text>
-          <Text style={style.age}> anos </Text>          
+          <Text style={style.name}>{item.nome}</Text>
+          <Text style={style.age}>{item.idade} anos</Text>
         </View>
         <View style={style.viewScroll}>
           <ScrollView style={style.scrollView}>
-              <Text style={style.text}>{item.descricao}</Text>
+            <Text style={style.text}>{item.descricao}</Text>
           </ScrollView>
         </View>
       </View>
-    )
+    );
   }
 
   return (
@@ -121,7 +60,7 @@ export const NossosAnjinhos = () => {
       <View style={style.boxCard}>
         <AppIntroSlider
           renderItem={renderCards}
-          data={criancas}
+          data={dados}
           activeDotStyle={{
             backgroundColor: '#009CFF',
             width: 30
